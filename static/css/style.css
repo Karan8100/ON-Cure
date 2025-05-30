@@ -1,0 +1,495 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f8ff;
+  color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background: linear-gradient(135deg, #0056b3, #003a8c);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section with real brain MRI cancer image */
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh; /* or 100vh if you want fullscreen */
+  background: url("brainawarness.jpg") center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+/* Overlay for transparency */
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% transparency */
+  z-index: 1;
+}
+
+/* Hero content sits above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin-left: -870px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Button */
+.cta-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Shared Content Section */
+.content-section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.content-section h2 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+.content-section p,
+.content-section ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+}
+
+/* SYMPTOMS SECTION */
+.symptom-section {
+  padding: 60px 20px;
+  background-color: #f5f9ff;
+  text-align: center;
+}
+
+.symptom-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #003366;
+}
+
+.symptom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.symptom-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.symptom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.symptom-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.symptom-card h3 {
+  font-size: 1.3rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.symptom-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* PROTECTION SECTION */
+.protection-section {
+  padding: 60px 20px;
+  background-color: #eef6ff;
+  text-align: center;
+}
+
+.protection-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #003366;
+}
+
+.protection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.protection-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.protection-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.protection-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0;
+}
+
+.protection-card h3 {
+  font-size: 1.3rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.protection-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 60px 20px;
+  background-color: #f9fcff;
+  color: #003366;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #002244;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.hospital-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.hospital-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.hospital-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.hospital-card h4 {
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.hospital-card a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.hospital-card a:hover {
+  text-decoration: underline;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4faff;
+}
+
+/* Dev Section */
+.dev-section {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  text-align: center;
+}
+
+.dev-section h2 {
+  font-size: 2.8rem;
+  color: #003366;
+  margin-bottom: 50px;
+}
+
+.dev-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.dev-card {
+  background: #ffffff;
+  width: 280px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dev-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dev-img img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+.dev-info {
+  padding: 20px;
+}
+
+.dev-info h3 {
+  font-size: 1.5rem;
+  margin: 10px 0 5px;
+  color: #002244;
+}
+
+.dev-info p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.3rem;
+  color: #0056b3;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff6f61;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dev-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f0f8ff;
+}
+
+.upload-box {
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+.upload-box h2 {
+  margin-bottom: 20px;
+  color: #002244;
+  font-size: 1.8rem;
+}
+
+.upload-form input[type="file"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px dashed #00bfff;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  width: 100%;
+}
+
+.upload-form button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  background-color: #090264;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-form button:hover {
+  background-color: #008ac4;
+}
+
+#upload-time {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #006699;
+  font-weight: 500;
+}
+
+.result-box {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-left: 6px solid #4caf50;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-box h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.result-box p {
+  font-size: 18px;
+  color: #333;
+  margin: 8px 0;
+}
+
+.result-image {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+

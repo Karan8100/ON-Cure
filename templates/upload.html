@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload MRI | MRI Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">🧠 MRI Detect</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+        <li><a href="{{ url_for('symptoms') }}">Symptoms</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('protection') }}">Protection</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Upload Section -->
+<section class="upload-section">
+  <div class="upload-box">
+  <h2>Upload Your MRI Scan</h2>
+  <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload') }}">
+    <input type="file" name="file" accept="image/*" required />
+    <button type="submit">Analyze</button>
+  </form>
+  </div>
+
+ {% if result %}
+  <div class="result-box">
+    <h3>🧠 Prediction Result</h3>
+    <p><strong>Result:</strong> {{ result }}</p>
+    <p><strong>Confidence:</strong> {{ confidence }}%</p>
+    <img src="{{ file_path }}" alt="Uploaded MRI Image" class="result-image" />
+  </div>
+ {% endif %}
+
+</section>
+  </body>
+</html>

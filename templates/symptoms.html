@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Symptoms | MRI Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">🧠 MRI Detect</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('symptoms') }}" class="active">Symptoms</a></li>
+        <li><a href="{{ url_for('protection') }}">Protection</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Symptoms Section -->
+    <section class="symptom-section">
+      <h2>Common Symptoms of Brain Tumor</h2>
+      <div class="symptom-grid">
+        <!-- Symptom 1 -->
+        <div class="symptom-card">
+          <img src="{{ url_for('static', filename='images/brain.jpeg') }}" alt="Headache" />
+          <h3>Chronic Headaches</h3>
+          <p>Persistent and worsening headaches that do not respond to usual treatment.</p>
+        </div>
+        <!-- Symptom 2 -->
+        <div class="symptom-card">
+          <img src="{{ url_for('static', filename='images/eye.png') }}" alt="Blurred Vision" />
+          <h3>Blurred Vision</h3>
+          <p>Double or blurry vision can be a sign of pressure on the brain.</p>
+        </div>
+        <!-- Symptom 3 -->
+        <div class="symptom-card">
+          <img src="{{ url_for('static', filename='images/seiz.jpeg') }}" alt="Seizures" />
+          <h3>Seizures</h3>
+          <p>Sudden, uncontrollable electrical disturbances in the brain.</p>
+        </div>
+        <!-- Symptom 4 -->
+        <div class="symptom-card">
+          <img src="{{ url_for('static', filename='images/memory.jpeg') }}" alt="Memory Loss" />
+          <h3>Memory Issues</h3>
+          <p>Forgetfulness, confusion, or trouble concentrating may occur.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

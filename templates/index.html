@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | MRI Cancer Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🧠 MRI Detect</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+        <li><a href="{{ url_for('symptoms') }}">Symptoms</a></li>
+        <li><a href="{{ url_for('protection') }}">Protection</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>
+        <span class="line1">MRI Brain</span><br />
+        <span class="line2">Cancer Detection</span>
+      </h1>
+      <p>Empowering early detection through AI-powered MRI analysis.</p>
+      <a href="{{ url_for('upload') }}" class="cta-btn">Check MRI</a>
+    </div>
+  </section>
+</body>
+</html>

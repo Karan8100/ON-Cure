@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Us | MRI Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTTXRMVbPJyGh8hGzBo/6YcOfUvhqvFyHsk2U6syH6n91F6KrBkWpi2E5cXj4Zp6QQq6Z9gj4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">🧠 MRI Detect</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('symptoms') }}">Symptoms</a></li>
+        <li><a href="{{ url_for('protection') }}">Protection</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Developer Section -->
+    <section class="dev-section">
+      <h2>Meet the Developers</h2>
+      <div class="dev-cards">
+        <!-- Aayush -->
+        <div class="dev-card">
+          <div class="dev-img">
+            <img src="{{ url_for('static', filename='images/aayush.jpg') }}" alt="Aayush Kanungo" />
+          </div>
+          <div class="dev-info">
+            <h3>Aayush Kanungo</h3>
+            <br />
+            <p>ECE, MANIT Bhopal</p>
+            <p>Full-Stack & ML Developer</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disha -->
+        <div class="dev-card">
+          <div class="dev-img">
+            <img src="{{ url_for('static', filename='images/disha.jpg') }}" alt="Disha Mittal" />
+          </div>
+          <div class="dev-info">
+            <h3>Disha Mittal</h3>
+            <br />
+            <p>CSE, MANIT Bhopal</p>
+            <p>ML Developer</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Karan -->
+        <div class="dev-card">
+          <div class="dev-img">
+            <img src="{{ url_for('static', filename='images/karan.jpg') }}" alt="Karan Upadhaya" />
+          </div>
+          <div class="dev-info">
+            <h3>Karan Upadhaya</h3>
+            <br />
+            <p>MDS, MANIT Bhopal</p>
+            <p>ML Developer</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

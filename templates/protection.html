@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Protection | MRI Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">🧠 MRI Detect</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('symptoms') }}">Symptoms</a></li>
+        <li><a href="{{ url_for('protection') }}" class="active">Protection</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Protection Section -->
+    <section class="protection-section">
+      <h2>How to Protect Against Brain Tumors</h2>
+      <div class="protection-grid">
+        <!-- Protection 1 -->
+        <div class="protection-card">
+          <img src="{{ url_for('static', filename='images/food.jpeg') }}" alt="Healthy Diet" />
+          <h3>Healthy Diet</h3>
+          <p>
+            Maintain a balanced diet rich in vegetables, fruits, and whole grains to support brain health.
+          </p>
+        </div>
+
+        <!-- Protection 2 -->
+        <div class="protection-card">
+          <img src="{{ url_for('static', filename='images/radiation.png') }}" alt="Avoid Radiation" />
+          <h3>Limit Radiation Exposure</h3>
+          <p>
+            Avoid excessive exposure to mobile phones and unnecessary CT scans.
+          </p>
+        </div>
+
+        <!-- Protection 3 -->
+        <div class="protection-card">
+          <img src="{{ url_for('static', filename='images/ex.jpeg') }}" alt="Exercise" />
+          <h3>Regular Exercise</h3>
+          <p>
+            Engage in regular physical activity to boost overall and neurological health.
+          </p>
+        </div>
+
+        <!-- Protection 4 -->
+        <div class="protection-card">
+          <img src="{{ url_for('static', filename='images/yoga.jpeg') }}" alt="Stress Management" />
+          <h3>Manage Stress</h3>
+          <p>
+            Practice mindfulness, yoga, or meditation to reduce stress, which can impact brain function.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

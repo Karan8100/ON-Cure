@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Us | MRI Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">🧠 MRI Detect</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('symptoms') }}">Symptoms</a></li>
+        <li><a href="{{ url_for('protection') }}">Protection</a></li>
+        <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-container">
+        <h2>About MRI Cancer Detection</h2>
+        <p>
+          Our website uses cutting-edge AI to assist in early detection of brain
+          tumors through MRI scan analysis. We aim to empower patients, raise
+          awareness about symptoms, and help connect people to appropriate care
+          and resources. Early detection can greatly improve the chances of
+          recovery and survival.
+        </p>
+
+        <h3>Hospital Contacts for Brain Tumor Support in India</h3>
+        <br />
+        <div class="hospital-cards">
+          <div class="hospital-card">
+            <h4>AIIMS Delhi</h4>
+            <p><strong>Phone:</strong> 011-26588500</p>
+            <p>
+              <strong>Website:</strong>
+              <a href="https://www.aiims.edu" target="_blank">www.aiims.edu</a>
+            </p>
+            <p><strong>Location:</strong> Ansari Nagar, New Delhi</p>
+          </div>
+
+          <div class="hospital-card">
+            <h4>Tata Memorial Hospital</h4>
+            <p><strong>Phone:</strong> 022-24177000</p>
+            <p>
+              <strong>Website:</strong>
+              <a href="https://tmc.gov.in" target="_blank">tmc.gov.in</a>
+            </p>
+            <p><strong>Location:</strong> Parel, Mumbai</p>
+          </div>
+
+          <div class="hospital-card">
+            <h4>NIMHANS Bengaluru</h4>
+            <p><strong>Phone:</strong> 080-26995000</p>
+            <p>
+              <strong>Website:</strong>
+              <a href="https://nimhans.ac.in" target="_blank">nimhans.ac.in</a>
+            </p>
+            <p><strong>Location:</strong> Hosur Road, Bengaluru</p>
+          </div>
+
+          <div class="hospital-card">
+            <h4>PGIMER Chandigarh</h4>
+            <p><strong>Phone:</strong> 0172-2756565</p>
+            <p>
+              <strong>Website:</strong>
+              <a href="https://pgimer.edu.in" target="_blank">pgimer.edu.in</a>
+            </p>
+            <p><strong>Location:</strong> Sector 12, Chandigarh</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
