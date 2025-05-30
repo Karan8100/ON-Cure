@@ -51,8 +51,8 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 90vh; /* or 100vh if you want fullscreen */
-  background: url("brainawarness.jpg") center center/cover no-repeat;
+  height: 90vh;
+  background: url("../images/brainawarness.jpg") center center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,6 +61,7 @@ body {
   padding: 0 20px;
   z-index: 1;
 }
+
 
 /* Overlay for transparency */
 .hero .overlay {
@@ -404,6 +405,7 @@ body {
 
 .upload-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
@@ -458,6 +460,8 @@ body {
   color: #006699;
   font-weight: 500;
 }
+
+
 
 .result-box {
   margin-top: 30px;
